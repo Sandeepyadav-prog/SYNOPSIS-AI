@@ -1,24 +1,42 @@
-
-# ✦ SYNOPSIS AI
+# ✨ SYNOPSIS AI
 ### AI-Powered Abstractive Text Summarization
 
-SYNOPSIS AI is an intelligent text summarization application that uses Natural Language Processing (NLP) and a pretrained Transformer model to generate concise, meaningful summaries from lengthy text documents.
+<p align="center">
+  <strong>Transform lengthy documents into concise, meaningful summaries using Artificial Intelligence.</strong>
+</p>
 
-The application supports TXT, PDF, and DOCX uploads, adjustable summary lengths, summary history, and downloadable summaries.
+## 🌐 Live Demo
+
+🚀 **Try SYNOPSIS AI:**  
+[https://synopsis-ai-up8o4cafxreugohdgkwszu.streamlit.app/](https://synopsis-ai-up8o4cafxreugohdgkwszu.streamlit.app/)
+
+**GitHub Repository:**  
+[https://github.com/Sandeepyadav-prog/SYNOPSIS-AI](https://github.com/Sandeepyadav-prog/SYNOPSIS-AI)
+
+---
+
+## 📌 Project Overview
+
+SYNOPSIS AI is an AI-powered abstractive text summarization application developed using Natural Language Processing (NLP) and Transformer-based deep learning techniques.
+
+It uses a pretrained DistilBART model to understand lengthy text and generate shorter, meaningful, human-readable summaries while preserving the important information.
+
+The application provides an interactive web interface where users can enter text, upload documents, select summary length, generate summaries, and download their results.
 
 ## 🚀 Key Features
 
-- **AI Summarization:** Generates human-readable abstractive summaries.
-- **Multiple File Formats:** Supports TXT, PDF, and DOCX uploads.
-- **Adjustable Summary Length:** Short, Medium, and Long options.
-- **Sample Article Library:** Preloaded sample articles for testing.
+- **AI-Powered Summarization:** Generates meaningful abstractive summaries using DistilBART.
+- **Multiple File Uploads:** Supports TXT, PDF, and DOCX documents.
+- **Adjustable Summary Length:** Choose Short, Medium, or Long summaries.
+- **Sample Articles Library:** Includes sample articles for quick testing.
 - **Advanced Text Statistics:** Displays word, sentence, and character statistics.
 - **Summary History:** Stores previously generated summaries.
-- **CSV Export:** Download summary history as a CSV file.
+- **CSV Export:** Download summary history in CSV format.
 - **PDF Export:** Download generated summaries as PDF files.
 - **TXT Export:** Download summaries as text files.
-- **Model Evaluation:** ROUGE-1, ROUGE-2, and ROUGE-L evaluation metrics.
-- **Modern Dashboard:** Interactive Streamlit interface.
+- **Model Evaluation:** Uses ROUGE-1, ROUGE-2, and ROUGE-L metrics.
+- **Interactive Dashboard:** Modern, user-friendly Streamlit interface.
+- **Multiple Application Pages:** Includes dashboard, summarizer, model insights, workflow, project information, and summary history.
 
 ## 🧠 Technology Stack
 
@@ -26,28 +44,43 @@ The application supports TXT, PDF, and DOCX uploads, adjustable summary lengths,
 |---|---|
 | Programming Language | Python |
 | Frontend / Interface | Streamlit |
-| AI / NLP | Hugging Face Transformers |
-| Model | DistilBART |
-| Deep Learning | PyTorch |
+| Artificial Intelligence | Hugging Face Transformers |
+| NLP Model | DistilBART |
+| Deep Learning Framework | PyTorch |
 | Data Processing | Pandas, NumPy |
-| PDF Processing | PyPDF |
+| Dataset | CNN/DailyMail |
+| PDF Reading | PyPDF |
 | DOCX Processing | python-docx |
 | PDF Generation | ReportLab |
-| Evaluation | ROUGE |
-| Dataset | CNN/DailyMail |
+| Model Evaluation | ROUGE |
+| Data Visualization | Matplotlib, Seaborn |
+| Development Environment | VS Code |
 
 ## 🤖 AI Model
 
-**Model:** `sshleifer/distilbart-cnn-12-6`
+**Model Name:** `sshleifer/distilbart-cnn-12-6`
 
 SYNOPSIS AI uses a pretrained DistilBART sequence-to-sequence Transformer model for abstractive text summarization.
 
-The model generates summaries by understanding the context and meaning of the input text rather than simply extracting sentences.
+Unlike extractive summarization, which selects existing sentences from the original text, abstractive summarization generates new sentences while preserving the main meaning and context.
+
+The model is based on the BART architecture and is designed for summarization tasks.
+
+## 📊 Dataset
+
+The project uses a sample of the **CNN/DailyMail dataset**, which contains news articles and their corresponding human-written summaries.
+
+The dataset is used for:
+- Text analysis and exploration.
+- Data preprocessing.
+- Understanding article and summary lengths.
+- Testing the summarization model.
+- Evaluating summarization performance.
 
 ## 📂 Project Structure
 
 ```text
-Abstractive_Text_Summarization/
+SYNOPSIS-AI/
 │
 ├── app/
 │   ├── streamlit_app.py
@@ -63,30 +96,40 @@ Abstractive_Text_Summarization/
 │   ├── cnn_dailymail_sample.csv
 │   ├── processed_cnn_dailymail.csv
 │   ├── rouge_evaluation_results.csv
-│   └── summary_history.json
+│   ├── summary_history.json
+│   ├── article_length_distribution.png
+│   └── summary_length_distribution.png
 │
 ├── notebooks/
-├── models/
-├── docs/
+│   ├── 01_download_dataset.py
+│   ├── 02_eda.py
+│   ├── 03_text_preprocessing.py
+│   ├── 04_test_summarizer.py
+│   ├── 05_model_evaluation.py
+│   └── 06_test_bart.py
+│
 ├── utils/
 │   └── summarizer.py
 │
 ├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
 ## ⚙️ Installation and Setup
 
+Follow these steps to run SYNOPSIS AI locally.
+
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Sandeepyadav-prog/SYNOPSIS-AI.git
 ```
 
-### 2. Open the Project Folder
+### 2. Navigate to the Project Folder
 
 ```bash
-cd Abstractive_Text_Summarization
+cd SYNOPSIS-AI
 ```
 
 ### 3. Create a Virtual Environment
@@ -95,7 +138,7 @@ cd Abstractive_Text_Summarization
 python -m venv venv
 ```
 
-### 4. Activate the Environment
+### 4. Activate the Virtual Environment
 
 **Windows:**
 
@@ -115,49 +158,65 @@ python -m pip install -r requirements.txt
 python -m streamlit run app/streamlit_app.py
 ```
 
-The application will open in your browser.
-
-## 📊 Model Evaluation
-
-The model is evaluated using ROUGE metrics:
-
-- **ROUGE-1:** Measures unigram overlap.
-- **ROUGE-2:** Measures bigram overlap.
-- **ROUGE-L:** Measures the longest common subsequence.
-
-Evaluation results are displayed on the Model Insights dashboard.
+The application will open in your default web browser.
 
 ## 🔄 Application Workflow
 
-1. Upload a document or enter text.
-2. Extract the document content.
-3. Select the desired summary length.
-4. Generate an AI-powered summary.
-5. View the generated summary and text statistics.
-6. Download the summary or access it later through Summary History.
+1. Open the SYNOPSIS AI web application.
+2. Navigate to the AI Summarizer page.
+3. Enter text or upload a TXT, PDF, or DOCX document.
+4. Select the desired summary length.
+5. Click the Generate AI Summary button.
+6. View the generated summary and text statistics.
+7. Download the summary as a TXT or PDF file.
+8. Access previously generated summaries through Summary History.
+
+## 📈 Model Evaluation
+
+The summarization model is evaluated using ROUGE metrics.
+
+| Metric | Description |
+|---|---|
+| ROUGE-1 | Measures unigram overlap between generated and reference summaries. |
+| ROUGE-2 | Measures bigram overlap. |
+| ROUGE-L | Measures the longest common subsequence. |
+
+Evaluation results are displayed on the Model Insights dashboard.
 
 ## 🎯 Project Objectives
 
-- Reduce the time required to read lengthy documents.
+- Develop an AI-based abstractive text summarization system.
+- Reduce the time required to understand lengthy documents.
 - Generate concise and meaningful summaries.
 - Apply Transformer-based NLP techniques.
-- Provide an easy-to-use document summarization interface.
+- Provide support for multiple document formats.
 - Evaluate summarization performance using ROUGE metrics.
+- Develop an interactive and accessible web application.
 
 ## 🔮 Future Enhancements
 
 - Multilingual text summarization.
 - Real-time summarization of web articles.
-- Improved summarization for very long documents.
+- Improved summarization of very long documents.
 - User authentication and personalized history.
 - Cloud-based model optimization.
+- Additional summarization models for comparison.
 
 ## 👩‍💻 Project Information
 
-**Project Name:** SYNOPSIS AI  
-**Project Domain:** Artificial Intelligence and Natural Language Processing  
-**Project Type:** Academic Project
+| Detail | Information |
+|---|---|
+| Project Name | SYNOPSIS AI |
+| Project Domain | Artificial Intelligence and Natural Language Processing |
+| Project Type | Academic Project |
+| Programming Language | Python |
+| Model | DistilBART |
+| Deployment | Streamlit Community Cloud |
 
 ---
 
-*Built with Python, NLP, Transformers, and Streamlit.*
+<p align="center">
+  <strong>✨ SYNOPSIS AI — Turning Long Text into Clear Insights.</strong>
+  <br>
+  Built with Python, NLP, Transformers, PyTorch, and Streamlit.
+</p>
